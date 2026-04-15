@@ -9,7 +9,7 @@ int main(void)
     
     for(i = 0; i < N; i+=1)
     {
-        scanf("%c", &ch); 
+        scanf(" %c", &ch); 
 
         if(ch >= '0' && ch <= '9') 
         {
