@@ -7,7 +7,7 @@ int main(void)
    
     scanf("%d", &N);
     
-    for(i = 0; i < N; i++)
+    for(i = 0; i < N; i+=1)
     {
         scanf("%c", &ch); 
 
@@ -19,7 +19,7 @@ int main(void)
             if(count_int > int_max) //이전과 새로운 알파벳 수 비교
                 int_max = count_int; //최대 숫자 개수 넣기
         }
-        else if(ch >= 'a' && ch <= 'z') 
+        else if(ch >= 'a' && ch <= 'z')
         {
             count_alp++;      
             count_int = 0;    //숫자 reset
@@ -28,7 +28,7 @@ int main(void)
                 alp_max = count_alp; //최대 알파벳 개수 넣기
         }
     } 
-
+  
     printf("%d \n", alp_max); //최대 알파벳 개수 출력
     printf("%d \n", int_max); //최대 숫자 개수 출력
     
