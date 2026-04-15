@@ -2,25 +2,25 @@
 
 int main(void)
 {
-    int n=0, ans=0, total=0;
-    scanf("%d", &ans); //정답 하나 먼저 입력 받기
+    int n=0, ans=0, total=0; //변수 설정, 맞힐 때까지 정수 입력 받을 n, 정답으로 입력받을 ans, 시도 횟수 카운트를 위한 total을 보이고, 0으로 초기화 헤준다.
+    scanf("%d", &ans); //정답 하나 먼저 입력 받기 (정수)
     
     do {
-        scanf("%d", &n); // 맞힐 때까지 정수 입력 받기
+        scanf("%d", &n); // 맞힐 때까지 정수 n에 입력 받기
         
         if (ans>n) { // if문을 통해 정답과 입력 받은 정수 사이의 크기를 비교, 정답이 입력 받은 정수보다 작을 때
-            printf("%d<?\n",n, n);
+            printf("%d<?\n", n); //문제와 같이 출력하기 위해 다음과 같이 설정. 위에서 입력받은 정수를 %d에 들어감.
             total+=1; //시도 횟수 카운트
         }
         else if (ans<n) { //정답이 입력 받은 정수보다 클 때
-            printf("%d>?\n", n, n);
+            printf("%d>?\n", n, n); //문제와 같이 출력하기 위해 다음과 같이 설정. 위에서 입력받은 정수를 %d에 들어감.
             total+=1; //시도 횟수 카운트
         }
-        else {
-            printf("%d==?\n", n,n); //정답과 입력 값이 같을 때
+        else { //else문을 통해 위 이외의 경우(ans==n)일 때
+            printf("%d==?\n",n); //정답과 입력 값이 같을 때
             total+=1; // 시도 횟수 카운트
-            printf("%d",total, total);
-            break;
+            printf("%d",total); //총 시도 횟수 출력
+            break; //나가기
         }
     } while(ans!=n); // 정답과 입력 받은 정수가 다를때 계속 반복, 같아지면 break
     
